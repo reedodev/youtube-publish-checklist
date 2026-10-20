@@ -1,0 +1,21 @@
+{
+  "name": "youtube-publish-checklist",
+  "owner": {
+    "name": "Reedo"
+  },
+  "metadata": {
+    "description": "Per-video publish gate for YouTube: custom thumbnail (size, ratio, shown on channel) and pinned comment, including a required follow-up task for scheduled releases.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "youtube-publish-checklist",
+      "description": "Per-video publish gate for YouTube: custom thumbnail (size, ratio, shown on channel) and pinned comment, including a required follow-up task for scheduled releases.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/youtube-publish-checklist"
+      ]
+    }
+  ]
+}
