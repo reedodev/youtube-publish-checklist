@@ -10,6 +10,21 @@
 
 롱폼과 쇼츠마다 맞춤 썸네일(규격·용량·채널 표시)과 고정 댓글을 확인하고, 예약 공개라면 공개 뒤 댓글을 달 후속 작업이 있는지까지 검사합니다. 하나라도 빠지면 '게시 완료'라고 보고하지 못하게 합니다.
 
+<!-- prereq-adapt -->
+## 무엇이 필요한가요?
+
+꼭 필요한 것은 Node 18 이상, 영상마다 만든 맞춤 썸네일 파일, YouTube Studio 접근(브라우저)입니다. 권장·선택 준비물까지 정리한 표는 [SKILL.md의 준비물](skills/youtube-publish-checklist/SKILL.md#준비물-쓰기-전에-있어야-하는-것)에 있습니다.
+
+## 바꿔 쓰기
+
+에이전트에게 다음처럼 말하면 옵션을 바꿔서 실행합니다.
+
+- "아동용 영상이라 댓글이 없어" → `publish.json`에서 그 영상에 `"madeForKids": true`
+- "이 영상은 고정 댓글 안 달 거야" → `"skipPinnedComment": true` (사용자가 직접 정한 경우만)
+- "썸네일만 먼저 검사해 줘" → `publish-gate.mjs thumb thumb.jpg --kind short`
+
+말과 옵션의 대응표는 [SKILL.md의 바꿔 쓰기](skills/youtube-publish-checklist/SKILL.md#바꿔-쓰기-이렇게-말하세요)에 있습니다.
+
 ## 설치
 
 **Claude Code 플러그인으로 설치**
