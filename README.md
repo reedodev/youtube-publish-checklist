@@ -56,6 +56,12 @@ node skills/youtube-publish-checklist/scripts/publish-gate.mjs check publish.jso
 
 `node tests/run.mjs`가 SKILL.md 형식을 검사하고 예시 파일로 스크립트를 실제로 실행합니다. 푸시할 때마다 GitHub Actions가 같은 시험을 돌립니다(위 test 배지).
 
+<!-- credits -->
+## 출처와 영감
+
+- **썸네일 기준**: 크기·형식·용량 기준은 YouTube 고객센터의 [맞춤 썸네일 안내](https://support.google.com/youtube/answer/72431)를 따릅니다. 기준이 바뀌면 `scripts/publish-gate.mjs`의 `checkThumb`를 고칩니다.
+- **점검 항목**: 쇼츠 썸네일 누락과 예약 공개 영상의 고정 댓글 누락은 작성자가 실제로 겪은 실수에서 나온 항목입니다.
+
 ## 만든 사람
 
 **리도**, AI 좌충우돌 실습 중인 20년차 엔지니어입니다. 매일 AI에게 일을 맡기다가 막힌 부분을 고쳐 가며 이 스킬을 만들었습니다.
@@ -68,5 +74,8 @@ node skills/youtube-publish-checklist/scripts/publish-gate.mjs check publish.jso
 ## English
 
 Per-video publish gate for YouTube: custom thumbnail (size, ratio, shown on channel) and pinned comment, including a required follow-up task for scheduled releases.
+
+**Credits.**
+- Thumbnail limits follow YouTube Help, [Add custom thumbnails](https://support.google.com/youtube/answer/72431). The checklist items come from mistakes the author actually made.
 
 Install: `/plugin marketplace add reedodev/youtube-publish-checklist` then `/plugin install youtube-publish-checklist@youtube-publish-checklist`, or copy `skills/youtube-publish-checklist` into `~/.claude/skills/`. See [SKILL.md](skills/youtube-publish-checklist/SKILL.md) for the full procedure. MIT License; third-party models, fonts and libraries keep their own licenses.

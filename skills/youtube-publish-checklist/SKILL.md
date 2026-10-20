@@ -57,3 +57,8 @@ node scripts/publish-gate.mjs check publish.json
 ## 한계
 - 스크립트는 파일 규격과, 사람이 확인했다고 적은 값을 검사할 뿐입니다. 채널 화면에 실제로 보이는지는 직접 보고 `thumbnailVerifiedOnChannel`, `pinnedVerified`를 채웁니다. 확인하지 않은 값을 true로 적지 않습니다.
 - YouTube Data API는 댓글 고정 여부를 알려 주지 않기 때문에 고정 확인은 화면으로 해야 합니다.
+
+<!-- credits -->
+## 출처와 영감
+- **썸네일 기준**: 크기·형식·용량 기준은 YouTube 고객센터의 [맞춤 썸네일 안내](https://support.google.com/youtube/answer/72431)를 따릅니다. 기준이 바뀌면 `scripts/publish-gate.mjs`의 `checkThumb`를 고칩니다.
+- **점검 항목**: 쇼츠 썸네일 누락과 예약 공개 영상의 고정 댓글 누락은 작성자가 실제로 겪은 실수에서 나온 항목입니다.
