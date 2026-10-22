@@ -1,0 +1,9 @@
+{
+  "videos": [
+    { "id": "sample-long", "kind": "long", "thumbnail": "sample-long.png", "thumbnailVerifiedOnChannel": true,
+      "visibility": "public", "pinnedComment": { "text": "오늘 영상 한 줄 요약입니다. 여러분은 어떻게 하시나요?", "pinnedVerified": true } },
+    { "id": "sample-short", "kind": "short", "thumbnail": "sample-short.png", "thumbnailVerifiedOnChannel": true,
+      "visibility": "scheduled", "publishAt": "2026-10-30T09:00:00+09:00",
+      "pinnedComment": { "text": "이 쇼츠의 핵심 한 줄입니다.", "followUpTask": "공개 10분 뒤 고정 댓글 달기" } }
+  ]
+}

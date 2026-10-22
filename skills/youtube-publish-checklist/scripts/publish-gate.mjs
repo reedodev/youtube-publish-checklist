@@ -77,7 +77,10 @@ if (cmd === 'thumb') {
 
 if (cmd === 'check') {
   const base = path.dirname(path.resolve(target));
-  const { videos = [] } = JSON.parse(fs.readFileSync(target, 'utf8'));
+  if (!fs.existsSync(target)) { console.error('publish.json 파일이 없습니다: ' + target + ' (File not found.)'); process.exit(2); }
+  let videos;
+  try { ({ videos = [] } = JSON.parse(fs.readFileSync(target, 'utf8'))); }
+  catch (e) { console.error('publish.json을 읽을 수 없습니다. JSON 형식을 확인하세요: ' + e.message + ' (Invalid JSON.)'); process.exit(2); }
   let bad = 0;
   for (const v of videos) {
     const p = [];
